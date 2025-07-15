@@ -49,17 +49,15 @@ async function POST(req: Request) {
 
 
 // GET METHOD
-async function GET(req: Request) {
+async function GET() {
     try {
-        const { term, interpatation } = await req.json()
-        const data = { term, interpatation }
-
-        const response = await createInterpretation(data);
-        return NextResponse.json({ message: "interperation created" })
-
+        const interpatation = await fetchInterpretation();
+        return NextResponse.json({ message: 'Get method not working' })
     }
     catch (error) {
-        console.error("post method is not working", error)
-        return NextResponse.json({ message: "post method not working" })
+        return NextResponse.json(
+
+
+            { error: "failed to fetch interperation" },{ status: 500 })
     }
 }
