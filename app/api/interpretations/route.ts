@@ -58,6 +58,6 @@ async function GET() {
         return NextResponse.json(
 
 
-            { error: "failed to fetch interperation" },{ status: 500 })
+            { error: "failed to fetch interperation" }, { status: 500 })
     }
 }
