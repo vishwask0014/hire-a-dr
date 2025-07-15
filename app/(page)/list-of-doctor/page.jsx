@@ -45,7 +45,6 @@ export default function ListOfDoctor() {
     return (
         <MainLayout>
 
-            {/* Header */}
             <div className="bg-background rounded-3xl flex items-center justify-center gap-20 lg:gap-40 w-full mx-auto px-10">
                 <div className="mt-14">
                     <h1 className="text-3xl font-bold">Consult with Top Doctors</h1>
@@ -90,7 +89,7 @@ export default function ListOfDoctor() {
                     <Link
                         href={`/doctor/${i.id}`}
                         key={i.id}
-                        target="_blank"
+                        target="_self"
                         className="bg-white shadow border-slate-200 overflow-hidden rounded-3xl p-4 lg:p-6 hover:bg-blue-50 max-w-[420px] w-full"
                     >
                         <div className="flex items-center gap-5">
@@ -122,7 +121,7 @@ export default function ListOfDoctor() {
                     </Link>
                 )) : (
                     <p className="text-center text-xl text-slate-600 mt-10">No doctors found for your search.</p>
-                )}
+                )}``
             </div>
 
             {/* Load More Button */}
@@ -135,7 +134,7 @@ export default function ListOfDoctor() {
                 </button>
             )}
 
-            <ModalUI />
+            {/* <ModalUI /> */}
         </MainLayout>
     );
 }
